@@ -1,0 +1,28 @@
+# This is the web directory. the git repo this box is for will 
+# live inside here. It allows for using the same server config 
+# amongst multiple projects. 
+/working_files
+/working_files/*
+/databases
+/databases/*
+!/databases/.gitsave
+
+# Make sure we don't actually copy in our system config
+/system_files/config.yml
+
+# RSA ID will be copied here on first git init, this is a per-machine
+# thing and shouldn't be included. 
+/system_files/utilities/git/id_rsa_pub_for_github.txt
+# If they exist, ssh keys will be copied from here
+/system_files/ssh/*
+!/system_files/ssh/.gitsave
+
+# ignore system files
+.DS_Store
+.idea
+thumbs.db
+__MACOSX
+._*
+.*swp
+.*swo
+.vagrant
